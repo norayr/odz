@@ -2,7 +2,7 @@ MODULE model;
 
 CONST 
   StatusCreated = "Created";
-	StatusUpdated = "Updated";
+  StatusUpdated = "Updated";
 
 TYPE
       string*      = ARRAY 256 OF CHAR;
@@ -14,7 +14,7 @@ TYPE
             Status : FileStatus;
   ModificationTime : string;
        GoToStaging : BOOLEAN;
-			 END;
+      END;
    
    fileMetadataArr* = POINTER TO ARRAY OF fileMetadata;
 
@@ -27,8 +27,8 @@ PROCEDURE Swap*(VAR arr: fileMetadataArr; i, j: INTEGER);
 VAR tmp: fileMetadata;
 BEGIN
   tmp := arr[j];
-	arr[j] := arr[i];
-	arr[i] := tmp;
+  arr[j] := arr[i];
+  arr[i] := tmp;
 END Swap;
 
 
