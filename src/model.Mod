@@ -31,7 +31,10 @@ BEGIN
   arr[i] := tmp;
 END Swap;
 
-
+PROCEDURE Less*(VAR arr: fileMetadataArr; i, j: INTEGER): BOOLEAN;
+BEGIN
+  RETURN arr[i].Path > arr[j].Path
+END Less;
 
 
 
