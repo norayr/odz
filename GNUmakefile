@@ -6,7 +6,7 @@ current_dir := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
 DPS := $(mkfile_dir_path)/dps
 
 
-all:
+all: get_deps
 					mkdir -p $(BUILD)
 					cd $(BUILD) && $(VOC) -s \
 					$(mkfile_dir_path)/src/error.Mod \
