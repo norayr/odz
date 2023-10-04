@@ -18,6 +18,11 @@ TYPE
    
    fileMetadataArr* = POINTER TO ARRAY OF fileMetadata;
 
+      commitHistory = RECORD
+            Version : string; (* computed *)
+            Date, Message: string;
+      END;
+
 PROCEDURE Len*(VAR arr: fileMetadataArr): LONGINT;
 BEGIN
   RETURN LEN(arr^)
